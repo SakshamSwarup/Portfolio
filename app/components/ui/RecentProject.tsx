@@ -1,7 +1,7 @@
+'use client'
 import React from 'react'
 import { projects } from '@/app/data/projectdata'
 import { PinContainer } from './3d-pin'
-import Image from 'next/image'
 
 function RecentProject() {
   return (
@@ -13,7 +13,7 @@ function RecentProject() {
         my Projects
       </span>
       <div className="flex flex-wrap items-center justify-center gap-16 p-4">
-        {projects.map(({ id, title, description, img, IconList, link }) => (
+        {projects.map(({ id, title, description, img, link }) => (
           <div
             key={id}
             className="flex h-[25rem] w-[80vw] items-center justify-center sm:w-96 lg:min-h-[32.5rem]"
@@ -25,7 +25,7 @@ function RecentProject() {
                 </h3>
                 <div className="!m-0 !p-0 text-base font-normal">
                   {img && (
-                    <Image src={img} alt={title} width={500} height={500} />
+                    <img src={img} alt={title} width={500} height={500} />
                   )}
                 </div>
                 <span className="!m-0 !p-0 text-sm">{description}</span>

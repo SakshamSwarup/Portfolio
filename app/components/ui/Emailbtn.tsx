@@ -18,15 +18,6 @@ export function EmailCopyButton() {
   return (
     <div className="relative inline-flex flex-col items-center">
       <div className="relative inline-flex flex-col items-center">
-        {copied && (
-          <img
-            src="./confetti.gif"
-            alt="confetti"
-            width={100}
-            height={100}
-            style={{ position: 'absolute', top: -15, right: 50 }}
-          />
-        )}
         <button
           onClick={handleCopy}
           className="relative z-10 rounded-2xl border-2 bg-zinc-900/45 px-6 py-3 text-white shadow-md transition-all ease-in-out active:scale-95"

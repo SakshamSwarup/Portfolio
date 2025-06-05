@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="light"
+      className="dark"
       style={{ scrollBehavior: 'smooth', colorScheme: 'dark' }}
     >
       <body className={`${inter.variable} antialiased`}>

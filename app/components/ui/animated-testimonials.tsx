@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
@@ -37,7 +39,7 @@ export const AnimatedTestimonials = ({
       const interval = setInterval(handleNext, 5000)
       return () => clearInterval(interval)
     }
-  }, [autoplay])
+  }, [autoplay, handleNext])
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10

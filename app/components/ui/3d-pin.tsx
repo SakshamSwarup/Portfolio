@@ -28,36 +28,39 @@ export const PinContainer = ({
   }
 
   return (
-    <a
-      className={cn(
-        'group/pin relative z-50 cursor-pointer',
-        containerClassName,
-      )}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      href={href || '/'}
-    >
-      <div
-        style={{
-          perspective: '1000px',
-          transform: 'rotateX(70deg) translateZ(0deg)',
-        }}
-        className="absolute top-1/2 left-1/2 mt-4 ml-[0.09375rem] -translate-x-1/2 -translate-y-1/2"
+    <div>
+      <a
+        className={cn(
+          'group/pin relative z-50 cursor-pointer',
+          containerClassName,
+        )}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        href={href || '/'}
       >
         <div
           style={{
-            transform: transform,
+            perspective: '1000px',
+            transform: 'rotateX(70deg) translateZ(0deg)',
           }}
-          className="absolute top-1/2 left-1/2 flex items-start justify-start overflow-hidden rounded-2xl border border-white/[0.1] bg-black p-4 shadow-[0_8px_16px_rgb(0_0_0/0.4)] transition duration-700 group-hover/pin:border-white/[0.2]"
+          className="absolute top-1/2 left-1/2 mt-4 ml-[0.09375rem] -translate-x-1/2 -translate-y-1/2"
         >
-          <div className={cn('relative z-50', className)}>{children}</div>
+          <div
+            style={{
+              transform: transform,
+            }}
+            className="absolute top-1/2 left-1/2 flex items-start justify-start overflow-hidden rounded-2xl border border-white/[0.1] bg-black p-4 shadow-[0_8px_16px_rgb(0_0_0/0.4)] transition duration-700 group-hover/pin:border-white/[0.2]"
+          >
+            <div className={cn('relative z-50', className)}>{children}</div>
+          </div>
         </div>
-      </div>
-      <PinPerspective title={title} href={href} />
-    </a>
+        <PinPerspective title={title} href={href} />
+      </a>
+    </div>
   )
 }
 
+/*************  ✨ Windsurf Command 🌟  *************/
 export const PinPerspective = ({
   title,
   href,
@@ -77,11 +80,8 @@ export const PinPerspective = ({
             <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-white">
               {title}
             </span>
-
-            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
           </a>
         </div>
-
         <div
           style={{
             perspective: '1000px',
@@ -100,7 +100,6 @@ export const PinPerspective = ({
               animate={{
                 opacity: [0, 1, 0.5, 0],
                 scale: 1,
-
                 z: 0,
               }}
               transition={{
@@ -109,6 +108,12 @@ export const PinPerspective = ({
                 delay: 0,
               }}
               className="absolute top-1/2 left-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+              onAnimationStart={() =>
+                console.log('Animation started for first motion div')
+              }
+              onAnimationComplete={() =>
+                console.log('Animation completed for first motion div')
+              }
             ></motion.div>
             <motion.div
               initial={{
@@ -120,7 +125,6 @@ export const PinPerspective = ({
               animate={{
                 opacity: [0, 1, 0.5, 0],
                 scale: 1,
-
                 z: 0,
               }}
               transition={{
@@ -129,6 +133,12 @@ export const PinPerspective = ({
                 delay: 2,
               }}
               className="absolute top-1/2 left-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+              onAnimationStart={() =>
+                console.log('Animation started for second motion div')
+              }
+              onAnimationComplete={() =>
+                console.log('Animation completed for second motion div')
+              }
             ></motion.div>
             <motion.div
               initial={{
@@ -140,7 +150,6 @@ export const PinPerspective = ({
               animate={{
                 opacity: [0, 1, 0.5, 0],
                 scale: 1,
-
                 z: 0,
               }}
               transition={{
@@ -149,6 +158,12 @@ export const PinPerspective = ({
                 delay: 4,
               }}
               className="absolute top-1/2 left-1/2 h-[11.25rem] w-[11.25rem] rounded-[50%] bg-sky-500/[0.08] shadow-[0_8px_16px_rgb(0_0_0/0.4)]"
+              onAnimationStart={() =>
+                console.log('Animation started for third motion div')
+              }
+              onAnimationComplete={() =>
+                console.log('Animation completed for third motion div')
+              }
             ></motion.div>
           </>
         </div>

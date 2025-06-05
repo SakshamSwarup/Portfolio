@@ -3,7 +3,6 @@ export interface Project {
   title: string
   description: string
   img: string
-  IconList: string
   link: string
 }
 
@@ -13,15 +12,6 @@ export const projects: Project[] = [
     title: 'Project',
     description: 'Description ',
     img: './p1.svg',
-    IconList: '',
-    link: 'https://github.com/sakshamswarup',
-  },
-  {
-    id: 1,
-    title: 'Project',
-    description: 'Description ',
-    img: './p1.svg',
-    IconList: '',
     link: 'https://github.com/sakshamswarup',
   },
   {
@@ -29,7 +19,6 @@ export const projects: Project[] = [
     title: 'Project',
     description: 'Description ',
     img: './p1.svg',
-    IconList: '',
     link: 'https://github.com/sakshamswarup',
   },
   {
@@ -37,7 +26,13 @@ export const projects: Project[] = [
     title: 'Project',
     description: 'Description ',
     img: './p1.svg',
-    IconList: '',
+    link: 'https://github.com/sakshamswarup',
+  },
+  {
+    id: 4,
+    title: 'Project',
+    description: 'Description ',
+    img: './p1.svg',
     link: 'https://github.com/sakshamswarup',
   },
 ]

@@ -1,9 +1,10 @@
+'use client'
+
 import { cn } from '@/lib/utils'
 import { SpotlightNew } from './spotlight-new'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import { GradientButton } from './GradientButton'
-import TagDemo from './TagDemo'
 import { ContainerTextFlip } from './container-text-flip'
 
 export default function Hero() {
@@ -46,7 +47,7 @@ export default function Hero() {
                 </Link>
               </div>
               <div className="mt-5 flex items-center justify-center space-x-4">
-                <GradientButton>Let's Connect</GradientButton>
+                <GradientButton>Let&apos;s Connect</GradientButton>
               </div>
             </div>
           </div>
