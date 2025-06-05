@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Copy } from 'lucide-react'
 import { BorderBeam } from './borderbeam'
 const EMAIL = 'sakshamswarup2430@gmail.com' // Replace with your email
