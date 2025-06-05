@@ -1,3 +1,4 @@
+'use client'
 import { items } from '@/app/data/myskill'
 import { DraggableCardBody, DraggableCardContainer } from './draggable-card'
 

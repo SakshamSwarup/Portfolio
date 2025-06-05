@@ -1,3 +1,4 @@
+'use client'
 import { TextReveal } from './textreveal'
 
 export function TextRevealDemo() {

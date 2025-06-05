@@ -48,7 +48,9 @@ function GlassNavbar() {
         {Navbardata.map(({ id, name, url, className }) => (
           <div key={id}>
             <Link href={url}>
-              <p className={name === 'Resume' && className}>{name}</p>
+              <p className={name === 'Resume' ? className : undefined}>
+                {name}
+              </p>
             </Link>
           </div>
         ))}
