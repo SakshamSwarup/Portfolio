@@ -2,7 +2,6 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { GlobeDemo } from './globemotion'
 import { BackgroundGradientAnimation } from './background-gradient-animation'
-import { Button } from './moving-border'
 import { EmailCopyButton } from './Emailbtn'
 
 export const BentoGrid = ({
@@ -53,7 +52,12 @@ export const BentoGridItem = ({
   >
     {image && (
       <div className={cn('', imageClassName)}>
-        <Image src={image} alt={title} fill={true} className={imageClassName} />
+        <Image
+          src={image}
+          alt={title ?? 'Bento Grid Image'}
+          fill={true}
+          className={imageClassName}
+        />
       </div>
     )}
 
