@@ -15,11 +15,11 @@ function ReachOutForm() {
     message: '',
   })
 
-  const handlechange = (e) => {
+  const handlechange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setformdata({ ...formdata, [e.target.name]: e.target.value })
   }
 
-  const handlesubmit = async (e) => {
+  const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
       const response = await fetch('/api/contact', {
