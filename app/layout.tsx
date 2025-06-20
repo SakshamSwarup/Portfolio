@@ -22,10 +22,11 @@ export default function RootLayout({
     <html
       lang="en"
       className="dark"
+      suppressHydrationWarning={false}
       style={{ scrollBehavior: 'smooth', colorScheme: 'dark' }}
     >
       <body className={`${inter.variable} antialiased`}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+        <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
       </body>
     </html>
   )

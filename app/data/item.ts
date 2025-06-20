@@ -23,8 +23,8 @@ export const GridItem = [
     className: 'lg:col-span-2 md:col-span-6 sm:col-span-3',
   },
   {
-    title: 'JS Animation Library',
-    description: 'Currently building a JS Animation library',
+    title: 'Scalable code',
+    description: 'I write scalable code that is easy to maintain and extend.',
     id: 4,
     key: 4,
     image: './b5.svg',

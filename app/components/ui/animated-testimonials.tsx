@@ -46,7 +46,9 @@ export const AnimatedTestimonials = ({
   }
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold text-slate-200">Testimonials</h1>
+      <h1 className="text-4xl font-bold tracking-wide text-slate-200 lg:text-6xl">
+        Testimonials
+      </h1>
       <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
         <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
           <div>

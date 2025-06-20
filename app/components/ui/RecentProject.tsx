@@ -19,16 +19,16 @@ function RecentProject() {
             className="flex h-[25rem] w-[80vw] items-center justify-center sm:w-96 lg:min-h-[32.5rem]"
           >
             <PinContainer title={title} href={link}>
-              <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2">
-                <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-slate-100">
+              <div className="flex h-[20rem] w-[20rem] flex-col sm:basis-1/2">
+                <h3 className="!m-0 max-w-xs bg-gradient-to-r from-pink-600 via-red-400 to-orange-400 bg-clip-text p-4 !pb-2 text-2xl/tight font-bold tracking-wide text-transparent text-shadow-amber-700 sm:max-w-md md:text-lg lg:max-w-lg">
                   {title}
                 </h3>
-                <div className="!m-0 !p-0 text-base font-normal">
+                <div className="jus !m-0 flex justify-center !p-0 text-base font-normal">
                   {img && (
-                    <img src={img} alt={title} width={500} height={500} />
+                    <img src={img} alt={title} width={200} height={200} />
                   )}
                 </div>
-                <span className="!m-0 !p-0 text-sm">{description}</span>
+                <span className="!m-0 !p-2 text-sm">{description}</span>
               </div>
             </PinContainer>
           </div>

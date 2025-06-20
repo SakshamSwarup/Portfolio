@@ -4,9 +4,7 @@ import { client } from '@/app/data/client'
 
 function Client() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1>Testmonials </h1>
-
+    <div className="flex flex-col items-center justify-center text-7xl">
       {client.map(({ id, name, img, testimonial }) => (
         <div
           key={id}

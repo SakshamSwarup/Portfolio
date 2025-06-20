@@ -47,7 +47,9 @@ export default function Hero() {
                 </Link>
               </div>
               <div className="mt-5 flex items-center justify-center space-x-4">
-                <GradientButton>Let&apos;s Connect</GradientButton>
+                <Link href="#contact">
+                  <GradientButton>Let&apos;s Connect</GradientButton>
+                </Link>
               </div>
             </div>
           </div>
