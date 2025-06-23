@@ -12,27 +12,25 @@ function RecentProject() {
       <span className="text-2xl font-bold text-gray-400 lg:text-5xl">
         my Projects
       </span>
-      <div className="flex flex-wrap items-center justify-center gap-16 p-4">
+      <div className="flex flex-wrap items-center justify-center gap-16">
         {projects.map(({ id, title, description, img, link }) => (
           <div
             key={id}
             className="flex h-[25rem] w-[80vw] items-center justify-center sm:w-96 lg:min-h-[32.5rem]"
           >
             <PinContainer title={title} href={link}>
-              <div className="flex h-[20rem] w-[20rem] flex-col sm:basis-1/2">
-                <h3 className="!m-0 max-w-xs">
-                  <span className="inline-block bg-gradient-to-r from-emerald-500 to-lime-600 bg-clip-text p-4 !pb-2 text-2xl font-bold tracking-wide text-transparent text-shadow-amber-700 sm:max-w-md md:text-lg lg:max-w-lg lg:p-2.5 lg:text-2xl">
+              <div className="flex h-[20rem] w-[20rem] flex-col py-2.5 text-center text-balance sm:basis-1/2">
+                <h3 className="max-w-xs">
+                  <span className="bg-gradient-to-r from-emerald-500 to-lime-600 bg-clip-text text-center text-2xl font-bold tracking-wide text-transparent sm:max-w-md md:text-lg lg:max-w-lg lg:text-2xl">
                     {title}
                   </span>
                 </h3>
-                <div className="jus !m-0 flex justify-center !p-0 text-base font-normal">
+                <div className="flex justify-center py-4 text-base font-normal">
                   {img && (
                     <img src={img} alt={title} width={200} height={200} />
                   )}
                 </div>
-                <span className="!m-0 !p-2 text-sm text-balance">
-                  {description}
-                </span>
+                <span className="text-sm">{description}</span>
               </div>
             </PinContainer>
           </div>

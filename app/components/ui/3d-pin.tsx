@@ -60,7 +60,6 @@ export const PinContainer = ({
   )
 }
 
-/*************  ✨ Windsurf Command 🌟  *************/
 export const PinPerspective = ({
   title,
   href,
@@ -75,9 +74,9 @@ export const PinPerspective = ({
           <a
             href={href}
             target={'_blank'}
-            className="relative z-10 flex items-center space-x-2 rounded-full bg-zinc-950 px-4 py-0.5 ring-1 ring-white/10"
+            className="relative z-10 flex items-center space-x-2 rounded-full bg-zinc-950 px-4 py-2 ring-1 ring-white/10"
           >
-            <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-white">
+            <span className="text-md relative z-20 inline-block bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text py-0.5 text-center font-bold text-transparent">
               {title}
             </span>
           </a>
