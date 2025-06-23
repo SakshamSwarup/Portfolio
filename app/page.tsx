@@ -7,6 +7,7 @@ import ReachOutForm from './components/ui/ReachOutForm'
 import { TextRevealDemo } from './components/ui/Text_demo'
 import Footer from './components/ui/footer'
 import GlassNavbar from './components/ui/glassNavbar'
+import { ScrollBasedVelocityDemo } from './components/ui/Velocitydemo'
 
 export default function Home() {
   return (
@@ -28,7 +29,11 @@ export default function Home() {
       <section id="projects">
         <RecentProject />
       </section>
-      <AnimatedTestimonialsDemo />
+      <ScrollBasedVelocityDemo />
+      <div className="mt-10 lg:mt-20">
+        <AnimatedTestimonialsDemo />
+      </div>
+
       <ReachOutForm />
       <Footer />
     </main>

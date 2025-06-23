@@ -31,7 +31,7 @@ export default function Hero() {
               <h2 className="text-5xl font-bold tracking-widest text-black sm:text-6xl dark:text-white">
                 Hello, I am Saksham Swarup
               </h2>
-              <p className="mt-4 max-w-2xl justify-center text-lg tracking-tighter text-gray-700 dark:text-gray-300">
+              <p className="mt-4 max-w-2xl justify-center text-lg tracking-tighter text-balance text-gray-700 dark:text-gray-300">
                 A passionate software developer with a love for creating
                 innovative solutions and a keen interest in web development.
               </p>

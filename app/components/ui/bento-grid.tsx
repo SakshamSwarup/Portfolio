@@ -4,6 +4,37 @@ import Image from 'next/image'
 import { GlobeDemo } from './globemotion'
 import { BackgroundGradientAnimation } from './background-gradient-animation'
 import { EmailCopyButton } from './Emailbtn'
+import { motion } from 'motion/react'
+const skills_first = [
+  'ReactJS',
+  'Next.js',
+  'Firebase',
+  'TypeScript',
+  'GraphQL',
+  'GCP',
+]
+const repeated_first = [
+  ...skills_first,
+  ...skills_first,
+  ...skills_first,
+  ...skills_first,
+  ...skills_first,
+]
+
+const skills_second = [
+  'MongoDB',
+  'Express.js',
+  'Node.js',
+  'TailwindCSS',
+  'Sentry',
+]
+const repeated_second = [
+  ...skills_second,
+  ...skills_second,
+  ...skills_second,
+  ...skills_second,
+  ...skills_second,
+]
 
 export const BentoGrid = ({
   className,
@@ -76,7 +107,7 @@ export const BentoGridItem = ({
     )}
 
     {id === 5 && (
-      <div className="flex h-full w-full items-center">
+      <div>
         <div>
           <Image
             src={image ?? '/b4.svg'}
@@ -98,36 +129,48 @@ export const BentoGridItem = ({
             <div className="flex max-h-[15rem] flex-col items-end gap-2 opacity-50">
               <div className="flex gap-4">
                 {/* First Column */}
-                <div className="flex flex-col gap-2">
-                  {['ReactJS', 'Next.js', 'TypeScript', 'GraphQL', 'GCP'].map(
-                    (item) => (
-                      <span
-                        key={item}
-                        className="shadow-[inset_0px_6px_8px_0px_#fafafa40,inset_0px_-6px_8px_0px_#fafafa40][background:linear-gradient(0deg,#151515,#151515),linear-gradient(180deg,hsla(0,0%,8%,0)_66.3%,hsla(0,0%,100%,.5)),linear-gradient(183.22deg,hsla(0,0%,100%,.5)_2.62%,hsla(0,0%,8%,0)_52.03%)] antialiasedtext-md pointer-events-auto relative mb-1.5 box-border flex h-20 w-40 cursor-pointer items-center justify-center rounded-2xl border-[0.6px] px-10 py-5 font-bold text-white not-italic antialiased shadow-[inset_0px_6px_8px_0px_#fafafa40,inset_0px_-6px_8px_0px_#fafafa40] transition-all duration-200 ease-in-out [background:linear-gradient(0deg,#151515,#151515),linear-gradient(180deg,hsla(0,0%,8%,0)_66.3%,hsla(0,0%,100%,.5)),linear-gradient(183.22deg,hsla(0,0%,100%,.5)_2.62%,hsla(0,0%,8%,0)_52.03%)] hover:scale-[1.02] hover:shadow-[0_0_12px_#ffffff30] active:scale-95 active:shadow-inner"
-                      >
-                        {item}
-                      </span>
-                    ),
-                  )}
-                </div>
+                <motion.div
+                  className="flex h-40 flex-col gap-2 overflow-hidden"
+                  style={{ height: '100%' }} // <-- key part!
+                  animate={{ y: ['-50%', '0%'] }}
+                  transition={{
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    duration: 120,
+                    ease: 'linear',
+                  }}
+                >
+                  {repeated_first.map((item, idx) => (
+                    <span
+                      key={item + idx}
+                      className="shadow-[inset_0px_6px_8px_0px_#fafafa40,inset_0px_-6px_8px_0px_#fafafa40][background:linear-gradient(0deg,#151515,#151515),linear-gradient(180deg,hsla(0,0%,8%,0)_66.3%,hsla(0,0%,100%,.5)),linear-gradient(183.22deg,hsla(0,0%,100%,.5)_2.62%,hsla(0,0%,8%,0)_52.03%)] antialiasedtext-md pointer-events-auto relative mb-1.5 box-border flex h-20 w-40 cursor-pointer items-center justify-center rounded-2xl border-[0.6px] px-10 py-5 font-bold text-white not-italic antialiased shadow-[inset_0px_6px_8px_0px_#fafafa40,inset_0px_-6px_8px_0px_#fafafa40] transition-all duration-200 ease-in-out [background:linear-gradient(0deg,#151515,#151515),linear-gradient(180deg,hsla(0,0%,8%,0)_66.3%,hsla(0,0%,100%,.5)),linear-gradient(183.22deg,hsla(0,0%,100%,.5)_2.62%,hsla(0,0%,8%,0)_52.03%)] hover:scale-[1.02] hover:shadow-[0_0_12px_#ffffff30] active:scale-95 active:shadow-inner"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </motion.div>
 
                 {/* Second Column */}
-                <div className="flex flex-col gap-2">
-                  {[
-                    'MongoDB',
-                    'Express.js',
-                    'Node.js',
-                    'TailwindCSS',
-                    'Sentry',
-                  ].map((item) => (
+                <motion.div
+                  className="flex h-40 flex-col gap-2 overflow-hidden"
+                  style={{ height: '100%' }} // <-- key part!
+                  animate={{ y: ['0%', '-100%'] }}
+                  transition={{
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    duration: 120,
+                    ease: 'linear',
+                  }}
+                >
+                  {repeated_second.map((item, idx) => (
                     <span
-                      key={item}
+                      key={item + idx}
                       className="shadow-[inset_0px_6px_8px_0px_#fafafa40,inset_0px_-6px_8px_0px_#fafafa40][background:linear-gradient(0deg,#151515,#151515),linear-gradient(180deg,hsla(0,0%,8%,0)_66.3%,hsla(0,0%,100%,.5)),linear-gradient(183.22deg,hsla(0,0%,100%,.5)_2.62%,hsla(0,0%,8%,0)_52.03%)] antialiasedtext-md pointer-events-auto relative m-1.5 mb-1.5 box-border flex h-20 w-40 cursor-pointer items-center justify-center rounded-2xl border-[0.6px] px-10 py-5 font-bold text-white not-italic antialiased shadow-[inset_0px_6px_8px_0px_#fafafa40,inset_0px_-6px_8px_0px_#fafafa40] transition-all duration-200 ease-in-out [background:linear-gradient(0deg,#151515,#151515),linear-gradient(180deg,hsla(0,0%,8%,0)_66.3%,hsla(0,0%,100%,.5)),linear-gradient(183.22deg,hsla(0,0%,100%,.5)_2.62%,hsla(0,0%,8%,0)_52.03%)] hover:scale-[1.02] hover:shadow-[0_0_12px_#ffffff30] active:scale-95 active:shadow-inner"
                     >
                       {item}
                     </span>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </div>
           </>
@@ -143,14 +186,19 @@ export const BentoGridItem = ({
 
       {id === 6 && (
         <BackgroundGradientAnimation containerClassName="object-fill rounded-2xl">
-          <div className="mt-20 flex lg:mt-20">
+          <motion.div
+            className="mt-20 flex lg:mt-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <div className="flex w-full flex-col items-center gap-4">
               <h2 className="lg:text-md w-3/4 text-center text-xl font-bold tracking-tight text-neutral-600 dark:text-neutral-200">
                 Want to start a project together?
               </h2>
               <EmailCopyButton />
             </div>
-          </div>
+          </motion.div>
         </BackgroundGradientAnimation>
       )}
     </div>

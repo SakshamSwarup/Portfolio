@@ -1,18 +1,25 @@
 'use client'
 import { items } from '@/app/data/myskill'
 import { DraggableCardBody, DraggableCardContainer } from './draggable-card'
+import { motion } from 'motion/react'
 
 export function DraggableSkill() {
   return (
     <>
-      <div className="h-xl flex w-full justify-center">
+      <motion.div
+        className="h-xl flex w-full justify-center"
+        transition={{ duration: 2, ease: 'easeIn' }}
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <span className="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-bold whitespace-pre-wrap text-transparent uppercase lg:text-9xl dark:from-white dark:to-slate-900/10">
           My{' '}
           <span className="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-bold whitespace-pre-wrap text-transparent uppercase lg:text-9xl dark:from-white dark:to-slate-900/10">
             Skills
           </span>
         </span>
-      </div>
+      </motion.div>
       <div className="h-xl flex w-3xl justify-center">
         <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
           <p className="top-1/2 max-w-sm -translate-y-20 text-center font-sans text-4xl font-bold text-neutral-300 lg:w-full lg:text-7xl">
